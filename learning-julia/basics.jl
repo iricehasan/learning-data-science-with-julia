@@ -94,3 +94,46 @@ print("Hello"); print(" World!")
 
 # println creates a new line
 println(""); println("Hello"); println("World!")
+
+# Arrays
+
+# number of elements then, type and dimension of the array is printed
+# 3-element Array{Int64,1}:
+int_array = [1,2,3,4,5]
+println(int_array)
+
+# 2-element Array{String,1}:
+str_array = ["Hello", "World"]
+println(str_array)
+
+# if type of the elements are not the same, Any will be printed
+# 3-element Vector{Any}:
+mixed_array = ["Hello", 1, 2]
+println(mixed_array)
+
+# These arrays are column vectors
+
+# If we define them with whitespaces instead of commas
+# we get row vectors
+
+# 1×5 Matrix{Int64}
+row_vector = [1 2 3 4 5]
+println(row_vector)
+
+# Using semi-colon we can construct matrices and semi-colon indicate the end of the row
+# 3×3 Matrix{Int64}
+matrix = [1 2 3; 4 5 6; 7 8 9]
+println(matrix)
+
+# we can use length and size functions 
+
+# 4
+println(length([1, -1, 2, 0]))
+
+
+# (2, 2)
+println(size([1 0; 0 1]))
+
+# # we can also specify the dimension where we want the shape to be computed
+# 2
+println(size([1 0; 0 1], 2)) 
