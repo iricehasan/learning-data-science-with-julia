@@ -72,3 +72,25 @@ println(3 == 3)
 println(4 == 5)
 # true
 println(7 <= 7)
+
+
+# Strings
+
+s = "This is a string in Julia"
+println(s)
+
+# we can index strings, which gives T
+println(s[1])
+
+# string slicing also useful for arrays
+println(s[1:4])
+
+# string interpolation
+# we can evaluate an expression inside a string
+println("The product between 4 and 5 is $(4 * 5)")
+
+# print does not create a new line
+print("Hello"); print(" World!")
+
+# println creates a new line
+println(""); println("Hello"); println("World!")
