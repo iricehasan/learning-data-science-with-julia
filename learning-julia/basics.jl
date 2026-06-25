@@ -27,3 +27,20 @@ println(L²)
 # \pi and \euler
 println(π)
 println(ℯ)
+
+# number types
+# Int64
+println(typeof(2))
+
+# Float64
+println(typeof(2.0))
+
+# Complex{Int64}
+println(typeof(3 + 5im))
+
+# division of integers result in float by default
+# 5.0
+println(10/2)
+
+# can convert to integer when valid
+println(Int64(10/2))
