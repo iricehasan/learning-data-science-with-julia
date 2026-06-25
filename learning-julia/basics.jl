@@ -44,3 +44,31 @@ println(10/2)
 
 # can convert to integer when valid
 println(Int64(10/2))
+
+
+"""
+Logical operators
+
+ !: \"not\" logical operator
+ &: \"and\" logical operator
+ |: \"or\" logical operator
+ ==: \"equal to\" logical operator
+ !=: \"different to\" logical operator
+ >: \"greater than\" operator
+ <: \"less than\" operator
+ >=: \"greater or equal to\" operator
+ <=: \"less or equal to\" operator
+"""
+
+# true
+println(true & true)
+# false
+println(true & false)
+# true
+println(true & !false)
+# true
+println(3 == 3)
+# false
+println(4 == 5)
+# true
+println(7 <= 7)
