@@ -37,7 +37,7 @@ end
 
 println(fibonacci(n1, n2, m))
 
-# We can use broadcasting with map function to apply function to each elemenet of an array
+# We can use broadcasting to apply function to each elemenet of an array
 function isPositive(x)
     if x >= 0
         return true
@@ -48,5 +48,14 @@ end
 
 println(isPositive(3)) # true
 
-# 4-element BitArray{1}:
+# 4-element BitArray{1}
 println(isPositive.([-1, 1, 3, -5]))
+
+# functions with ! are called bang and modify arrays in place
+arr = [1, 2, 3]
+n = pop!(arr)
+
+# 2-element Array{Int64,1}:
+println(arr)
+# returns 3
+println(n)
