@@ -137,3 +137,41 @@ println(size([1 0; 0 1]))
 # # we can also specify the dimension where we want the shape to be computed
 # 2
 println(size([1 0; 0 1], 2)) 
+
+# Broadcasting
+
+# we can use . before operators to broadcast and carry element wise operations
+
+broadcasted_array = 2 .+ [1, 1, 1]
+# 3-element Vector{Int64}:
+# [3, 3, 3]
+println(broadcasted_array)
+
+# This will output bit array with 0s as false 1s as true
+# 3-element BitVector
+# [1,0,0]
+println(3 .> [2, 4, 5])
+
+# between two arrays with the same shape, broadcasting is done element wise
+# 3-element Array{Int64,1}
+println([7, 2, 1] .* [10, 4, 8])
+
+# 1×3 Array{Float64,2}
+println([10 2 35] ./ [5 2 7])
+
+# 2×2 Array{Int64,2}
+println([5 2; 1 4] .- [2 1; 2 3])
+
+# If broadcast operator between a column vector and a row vector
+# the broadcast is done for every row of the first vector and every column of the second vector
+# and returns a matrix
+# 3×3 Array{Int64,2}
+println([1, 0, 1] .+ [3 1 4])
+
+# this concatenates the two arrays vertically, giving us a new long array
+# 6-element Array{Int64,1}
+println(vcat([1, 2, 3], [4, 5, 6]))
+
+# this stacks the two arrays one next to the other, returning a matrix
+# 3×2 Array{Int64,2}
+println(hcat([1, 2, 3], [4, 5, 6]))
