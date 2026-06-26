@@ -68,3 +68,48 @@ println(f(2,3))
 # we can use map method to apply a function to each element of the array
 # first argument is a function and second argument is an array
 println(map(x -> x^2 + 5, [2, 4, 6, 3, 3]))
+
+# Dictionaries
+
+# We define them with Dict() keyword
+# Dict(key1 => value1, key2 => value2)
+# Dict{String,Int64} with 2 entries
+println(Dict("A" => 1, "B" => 2))
+
+# Dict{String,Float64} with 2 entries
+println(Dict("x" => 1.4, "y" => 5.3))
+
+# Dict{Int64,Float64} with 2 entries
+println(Dict(1 => 10.0, 2 => 100.0))
+
+# We can define Dictionaries by specifying the type instead of letting julia automatically assign the types
+# Dict{key type, value type}(key1 => value1, key2 => value2)
+
+# Dict{Int64,String} with 2 entries
+println(Dict{Int64,String}(1 => "Hello", 2 => "Wormd"))
+
+# Dict{String,Int64} with 3 entries
+languages = Dict{String,Int64}("Julia" => 2012, "Java" => 1995, "Python" => 1990)
+
+# we can grab a key
+println(languages["Julia"])
+
+# we can add a new element
+languages["C++"] = 1980
+
+# Dict{String,Int64} with 4 entries
+println(languages)
+
+# we can modify a value 
+languages["Python"] = 1991
+
+# we can delete an element
+delete!(languages,"Java")
+
+# Dict{String,Int64} with 3 entries
+println(languages)
+
+# Iterate over (key, value) pairs over a dictionary
+for(key,value) in languages
+    println("$key was released in $value")
+end
