@@ -10,3 +10,29 @@ arr = [1, 3, 2, 2]
 for element in arr
     println(element)
 end
+
+# Conditional statements are very similar to Python
+x = 3
+if x > 2
+    println("x is greater than 2")
+elseif 1 < x < 2
+    println("x is in between 1 and 2")
+else
+    println("x is less than 1")
+end
+
+# We can define a fibonacci function
+n1 = 0
+n2 = 1
+m = 10
+function fibonacci(n1, n2, m)
+    fib = Array{Int64,1}(undef, m) # (undef, m) initializes the array with undefined values with number of m of them
+    fib[1] = n1
+    fib[2] = n2
+    for i in 3:m
+        fib[i] = fib[i-1] + fib[i-2]
+    end
+    return fib
+end
+
+println(fibonacci(n1, n2, m))
