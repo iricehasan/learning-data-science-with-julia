@@ -36,3 +36,17 @@ function fibonacci(n1, n2, m)
 end
 
 println(fibonacci(n1, n2, m))
+
+# We can use broadcasting with map function to apply function to each elemenet of an array
+function isPositive(x)
+    if x >= 0
+        return true
+    elseif x < 0
+        return false
+    end
+end
+
+println(isPositive(3)) # true
+
+# 4-element BitArray{1}:
+println(isPositive.([-1, 1, 3, -5]))
