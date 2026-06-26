@@ -59,3 +59,12 @@ n = pop!(arr)
 println(arr)
 # returns 3
 println(n)
+
+# Anonymous functions
+f = (x,y) -> x + y 
+# 1 (generic function with 1 method)
+println(f(2,3))
+
+# we can use map method to apply a function to each element of the array
+# first argument is a function and second argument is an array
+println(map(x -> x^2 + 5, [2, 4, 6, 3, 3]))
